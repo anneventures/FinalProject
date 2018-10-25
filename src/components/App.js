@@ -6,6 +6,8 @@ import Dashboard from './Dashboard'
 import Home from './Home'
 import NoMatch from './NoMatch'
 import CreateAccont from './CreateAccont'
+import ExpensesForm from './ExpensesForm';
+
 
 // alert
 import Alert from 'react-s-alert';
@@ -94,7 +96,13 @@ class App extends Component {
             <CreateAccont />
           )} />
 
+          <Route exact path='/expenses_report' render={() => (
+            <ExpensesForm />
+          )} />
+            
           <Route component={NoMatch} />
+
+
 
         </Switch>
 
