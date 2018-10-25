@@ -15,16 +15,19 @@ class CreateAccont extends Component {
     return(
 
       <Container className='create_acount' style={{textAlign: 'center'}}>
+       <h1>BUDGET+</h1>
+
+        <CreateAccontForm />
 
 
-        <Grid style={{marginTop:60}}>
-          <Grid.Column textAlign='right' width={16}>
+        <Grid style={{marginTop:40}}>
+
+          <Grid.Column textAlign='center' width={16}>
             <Link to="/">Sign in</Link>
           </Grid.Column>
         </Grid>
 
 
-        <CreateAccontForm />
       </Container>
 
     )
