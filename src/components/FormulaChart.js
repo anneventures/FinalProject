@@ -15,12 +15,15 @@ const data = {
     backgroundColor: [
       '#FF6384',
       '#36A2EB',
-      '#FFCE56'
+      '#FFCE56',
+      'blue',
+      'yellow',
+      'lightgreen',
+      'purple',
+      'magenta',
+      'cyan'
       ],
       hoverBackgroundColor: [
-      '#FF6384',
-      '#36A2EB',
-      '#FFCE56'
       ]
 
 	}]
