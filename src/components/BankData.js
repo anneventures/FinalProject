@@ -3,7 +3,9 @@ import { withRouter } from 'react-router'
 import { connect } from 'react-redux'
 import PlaidLink from 'react-plaid-link';
 
-
+//Hi team, use this dummy code to log in to any of the banks:
+//username: user_good
+//password: pass_good
 
 const CLIENT_ID = '5bccf13344fc260011e054b9';
 const SECRET = '1ed5257d83985b9fa3b21a8456745f';
