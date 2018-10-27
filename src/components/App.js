@@ -7,6 +7,7 @@ import Home from './Home'
 import NoMatch from './NoMatch'
 import CreateAccont from './CreateAccont'
 import ExpensesForm from './ExpensesForm';
+import BankData from './BankData';
 
 
 // alert
@@ -99,6 +100,11 @@ class App extends Component {
           <Route exact path='/expenses_report' render={() => (
             <ExpensesForm />
           )} />
+
+          <Route exact path='/bank_data' render={() => (
+            <BankData/>
+
+          )}/>
             
           <Route component={NoMatch} />
 
