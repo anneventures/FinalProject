@@ -5,14 +5,15 @@
   "dependencies": {
     "bcrypt": "^1.0.3",
     "body-parser": "^1.18.2",
+    "chart.js": "^2.7.3",
     "crypto": "^1.0.1",
-    "express": "^4.16.1",
     "express-session": "^1.15.6",
     "mongodb": "^2.2.31",
     "radium": "^0.19.5",
     "react": "^16.0.0",
     "react-animations": "^0.1.0",
     "react-bootstrap": "^0.31.3",
+    "react-chartjs-2": "^2.7.4",
     "react-dom": "^16.0.0",
     "react-ionicons": "^1.5.9",
     "react-redux": "^5.0.6",
@@ -37,6 +38,7 @@
   "license": "MIT",
   "devDependencies": {
     "babel-cli": "^6.26.0",
-    "babel-preset-env": "^1.6.0"
+    "babel-preset-env": "^1.6.0",
+    "express": "^4.16.4"
   }
 }

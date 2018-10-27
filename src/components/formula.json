@@ -1,0 +1,27 @@
+[
+    {
+        "Category": "Housing",
+        "Percent": 35
+    } , {
+        "Category": "Utilities",
+        "Percent": 5
+    } , {
+        "Category": "Transportation",
+        "Percent": 20
+    } , {
+        "Category": "Food",
+        "Percent": 10
+    } , {
+        "Category": "Entertainment",
+        "Percent": 5
+    } , {
+        "Category": "Personal",
+        "Percent" : 5
+    } , {
+        "Category" :"Savings",
+        "Percent": 5
+    } , {
+        "Category": "Debt Payments",
+        "Percent": 15
+    }
+]

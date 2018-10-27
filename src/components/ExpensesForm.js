@@ -6,17 +6,18 @@ import { connect } from 'react-redux'
 import { Container, Form, Input, Button, Grid } from 'semantic-ui-react'
 
 class ExpensesForm extends Component {
-
+//grab user key to associate with form
+//hidden field
     state = {
-        income: 0,
-        housing: 0,
-        utilities: 0,
-        transportation: 0,
-        food: 0,
-        entertainment: 0,
-        debt: 0,
-        personal: 0,
-        savings: 0
+        income: null,
+        housing: null,
+        utilities: null,
+        transportation: null,
+        food: null,
+        entertainment: null,
+        debt: null,
+        personal: null,
+        savings: null
     }
 
     handleChange = (e, { name, value }) => {
@@ -26,6 +27,7 @@ class ExpensesForm extends Component {
     onSubmit = () => {
 
 //            handle the form submit
+
     }
     
       render() {
