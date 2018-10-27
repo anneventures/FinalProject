@@ -7,6 +7,7 @@ import Home from './Home'
 import NoMatch from './NoMatch'
 import CreateAccont from './CreateAccont'
 import ExpensesForm from './ExpensesForm';
+import FormulaChart from './FormulaChart';
 import BankData from './BankData';
 
 
@@ -106,6 +107,10 @@ class App extends Component {
 
           )}/>
             
+          <Route exact path='/formula' render={() => (
+            <FormulaChart />
+          )} />
+
           <Route component={NoMatch} />
 
 
