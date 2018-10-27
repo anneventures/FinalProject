@@ -31,4 +31,12 @@ class BankData extends Component {
       )
     }
   }
-  export default BankData
+ 
+  function mapStateToProps ( {user} ) {
+    return {
+      user
+    }
+  }
+  
+  export default withRouter( connect( mapStateToProps)(BankData));
+  
