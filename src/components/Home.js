@@ -14,15 +14,15 @@ class Home extends Component {
 
     return(
       <Container className='home' style={{textAlign: 'center'}}>
+       <h1>BUDGET+</h1>
 
-        <Grid style={{marginTop:60}}>
-          <Grid.Column textAlign='right' width={16}>
+        <LoginForm />
+
+        <Grid style={{marginTop:40}}>
+          <Grid.Column textAlign='center' width={16}>
             <Link to="/create_acount">Create an account</Link>
           </Grid.Column>
         </Grid>
-
-
-        <LoginForm />
 
       </Container>
     )

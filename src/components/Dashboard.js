@@ -4,10 +4,27 @@ import { connect } from 'react-redux'
 
 import { LOCAL_STRAGE_KEY } from '../utils/Settings'
 
+//semantic-ui
+import { Container, Form, Input, Button, Grid, Header } from 'semantic-ui-react'
+
+
 // API
 import * as MyAPI from '../utils/MyAPI'
 
 class Dashboard extends Component {
+
+  state = {
+    income: 0
+  }
+  
+  onSubmit = () => {
+
+    // after user enters annual income and clicks Submit button
+    const { income } = this.state
+    const params = {
+      income: income,
+    }
+  }  
 
   logoutRequest = () => {
 
@@ -29,9 +46,18 @@ class Dashboard extends Component {
     })
   }
 
+
+    handleChange = (e, { name, value }) => {
+        this.setState({ [name]: value })
+      }
+      
+
   render() {
 
     const { user } = this.props
+
+    const { income } = this.state
+    
 
     return(
       <div className='dashboard' style={{textAlign: 'center'}}>
@@ -45,6 +71,47 @@ class Dashboard extends Component {
         <div>
           <div>
             { JSON.stringify(user)}
+
+            <Container text className='create_acount_form'>
+
+            <Form onSubmit={this.onSubmit} style={{marginTop:60}}>
+              
+            <Grid>
+            <Grid.Column textAlign='left' width={16}>              
+              <Header as='h1'>What is your annual income?</Header>
+              <p>Please enter you annual income below then click the <em>Calculate</em> button to see how much of your income you should save towards your goal(s).</p>
+              <Input
+                style={{width: '100%'}}
+                icon='dollar sign'
+                iconPosition='left'
+                name='income'
+                onChange={this.handleChange}
+                value={income}
+                placeholder='40000' /> 
+            </Grid.Column>
+                
+            <Grid.Column width={16}>
+              <Button
+                style={{width: '100%'}}
+                loading={this.state.loading}
+                disabled={this.state.loading}
+                type='submit'>Calculate</Button>
+            </Grid.Column>
+
+            <Grid.Column textAlign='left' width={16}>
+              <Header as='h2'>Savings</Header>
+              <p>Based on your income, you should be saving the following amount towards your goal(s):</p>
+                <Header sub>Goal 1:</Header> {this.state.goalOne}
+                <Header sub>Goal 2:</Header> {this.state.goalTwo}
+                <Header sub>Goal 3:</Header> {this.state.goalThree}
+
+            </Grid.Column>
+
+          </Grid>
+        </Form>
+        </Container>
+
+
           </div>
         </div>
 

@@ -79,8 +79,9 @@ class LoginForm extends Component {
     const { email, password } = this.state
 
     return(
-      <Container text className='create_acount_form'>
+      <Container text className='create_acount_form' style={{marginTop:40}}>
 
+       <h2>Sign in</h2>
         <Form onSubmit={this.onSubmit} style={{marginTop:60}}>
           <Grid>
 
