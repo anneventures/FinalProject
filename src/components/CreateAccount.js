@@ -10,7 +10,7 @@ import CreateAccountForm from './CreateAccountForm'
 class CreateAccount extends Component {
 	render() {
 		return (
-			<Container className='create_account' style={{textAlign: 'center'}}>
+			<Container className='create_account' style={{textAlign: 'center'}}>       		
 
 				<Grid style={{marginTop:60}}>
 					<Grid.Column textAlign='right' width={16}>
