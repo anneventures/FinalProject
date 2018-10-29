@@ -1,0 +1,8 @@
+.background{
+    background: url('./finance.png')
+}
+
+.Quote{
+    list-style-type: none;
+    font-family: 'Open Sans', sans-serif;
+  }
