@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { withRouter } from 'react-router'
 import { connect } from 'react-redux'
+import formula from './Formula/formula'
 
 import { LOCAL_STRAGE_KEY } from '../utils/Settings'
 
@@ -11,19 +12,20 @@ import { Container, Form, Input, Button, Grid, Header } from 'semantic-ui-react'
 // API
 import * as MyAPI from '../utils/MyAPI'
 
+//chart
+import FormulaChart from './Formula/FormulaChart';
+
 class Dashboard extends Component {
 
   state = {
-    income: 0
+    income: 0,
+    showGraph: false
   }
-  
-  onSubmit = () => {
 
+  onSubmit = () => {
+    console.log("income" + this.state.income +" data: " + this.data)
     // after user enters annual income and clicks Submit button
-    const { income } = this.state
-    const params = {
-      income: income,
-    }
+    this.setState ({showGraph: true})
   }  
 
   logoutRequest = () => {
@@ -57,6 +59,29 @@ class Dashboard extends Component {
     const { user } = this.props
 
     const { income } = this.state
+    const formulaLabels = formula.map(formula => formula.Category);
+    let formulaData = formula.map(formula => (formula.Percent*income/100/12).toFixed(2));
+    
+    const data = {
+      labels: formulaLabels,
+      datasets: [{
+        data: formulaData,
+        backgroundColor: [
+          'red',
+          'grey',
+          'orange',
+          'blue',
+          'yellow',
+          'lightgreen',
+          'purple',
+          'magenta',
+          'cyan'
+          ],
+          hoverBackgroundColor: [
+          ]
+    
+      }]
+    };
     
 
     return(
@@ -97,6 +122,12 @@ class Dashboard extends Component {
                 disabled={this.state.loading}
                 type='submit'>Calculate</Button>
             </Grid.Column>
+            
+            <Grid.Column width={16}>
+            {this.state.showGraph ? <FormulaChart
+            data = {this.data}
+            /> : null }
+            </Grid.Column>
 
             <Grid.Column textAlign='left' width={16}>
               <Header as='h2'>Savings</Header>
@@ -119,7 +150,6 @@ class Dashboard extends Component {
     )
   }
 }
-
 // react-redux
 function mapStateToProps ( {user} ) {
   return {

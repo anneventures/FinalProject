@@ -7,7 +7,7 @@ import Home from './Home'
 import NoMatch from './NoMatch'
 import CreateAccont from './CreateAccont'
 import ExpensesForm from './ExpensesForm';
-import FormulaChart from './FormulaChart';
+import FormulaChart from './Formula/index';
 import BankData from './BankData';
 
 
