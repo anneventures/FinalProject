@@ -20,10 +20,14 @@ class Dashboard extends Component {
   onSubmit = () => {
 
     // after user enters annual income and clicks Submit button
-    const { income } = this.state
-    const params = {
-      income: income,
-    }
+
+    this.props.history.push("/formula")
+
+
+    // const { income } = this.state
+    // const params = {
+    //   income: income,
+    // }
   }  
 
   logoutRequest = () => {
@@ -98,14 +102,14 @@ class Dashboard extends Component {
                 type='submit'>Calculate</Button>
             </Grid.Column>
 
-            <Grid.Column textAlign='left' width={16}>
+            {/* <Grid.Column textAlign='left' width={16}>
               <Header as='h2'>Savings</Header>
               <p>Based on your income, you should be saving the following amount towards your goal(s):</p>
                 <Header sub>Goal 1:</Header> {this.state.goalOne}
                 <Header sub>Goal 2:</Header> {this.state.goalTwo}
                 <Header sub>Goal 3:</Header> {this.state.goalThree}
 
-            </Grid.Column>
+            </Grid.Column> */}
 
           </Grid>
         </Form>
