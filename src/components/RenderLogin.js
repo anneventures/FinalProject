@@ -1,5 +1,6 @@
 import React from 'react';
 import {Redirect} from 'react-router-dom';
+import '../Quotes.css'
 
 
 class RenderLogin extends React.Component{
@@ -32,7 +33,7 @@ render(){
     return (
         <div>
         {this.renderRedirect()}
-        <button className ="btn btn-success" onClick={this.setRedirect}>Login </button>
+        <button className ="btn btn-dark btn-block btn-text" onClick={this.setRedirect}>Login </button>
         </div>
     )
     }
