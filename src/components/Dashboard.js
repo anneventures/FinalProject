@@ -70,29 +70,7 @@ class Dashboard extends Component {
     const { user } = this.props
 
     const { income } = this.state
-    const formulaLabels = formula.map(formula => formula.Category);
-    let formulaData = formula.map(formula => (formula.Percent*income/100/12).toFixed(2));
-    
-    const data = {
-      labels: formulaLabels,
-      datasets: [{
-        data: formulaData,
-        backgroundColor: [
-          'red',
-          'grey',
-          'orange',
-          'blue',
-          'yellow',
-          'lightgreen',
-          'purple',
-          'magenta',
-          'cyan'
-          ],
-          hoverBackgroundColor: [
-          ]
-    
-      }]
-    };
+  
     
 
     return(
@@ -136,7 +114,7 @@ class Dashboard extends Component {
             
             <Grid.Column width={16}>
             {this.state.showGraph ? <FormulaChart
-            data = {this.data}
+            income = {this.state.income}
             /> : null }
             </Grid.Column>
 
