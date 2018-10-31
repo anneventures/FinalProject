@@ -1,7 +1,8 @@
-import React, { Component } from 'react'
-import { withRouter } from 'react-router'
-import { connect } from 'react-redux'
+import React, { Component } from 'react';
+import { withRouter } from 'react-router';
+import { connect } from 'react-redux';
 import PlaidLink from 'react-plaid-link';
+import plaid from 'plaid';
 
 //Hi team, use this dummy code to log in to any of the banks:
 //username: user_good
@@ -59,14 +60,68 @@ class BankData extends Component {
       balance: 0,
       loading: false,
       error: null
+    };
+
+    this.client = new plaid.Client(CLIENT_ID, SECRET, PUBLIC_KEY, plaid.environments.sandbox)
+  }
+
+  componentWillMount() {
+    this.fetchBalance();
+  }
+
+  fetchBalance() {
+    const items = getItems();
+  }
+
+  fetchBalance() {
+    const items = getItems();
+
+    if (items.allIds.length > 0) {
+      const item = items.byID[items.allIds[0]];
+      const {accessToken} =item;
+      this.setState({ ...this.state, loading: true });
+      this.client
+        .getBalance(accessToken, {})
+        .then(res => {
+          const balance = res.accounts.reduce((val, acct) => val + acct.balances.available, 0);
+          this.setState({ ...this.state, balance, loading: false});
+        })
+        .catch(() => {
+          this.setState({
+            ...this.state,
+            loading: false,
+            error: 'Unable to get balance.',
+          });
+        });
     }
   }
-    handleOnSuccess(token, metadata) {
-      // send token to client server
-    }
-    handleOnExit() {
-      // handle the case when your user exits Link
-    }
+
+  onItemLinked(publicToken, metadata) {
+    const { institution_id: id, name } = metadata.institution;
+
+    this.client
+      .exchangePublicToken(publicToken)
+      .then(res => {
+        const {access_token: accessToken } = res;
+        addItem({
+          id,
+          name,
+          publicToken,
+          accessToken,
+        });
+
+      this.fetchBalance();
+      })
+      .catch(() => {
+        this.setState({
+          ...this.state,
+        error: 'Unable to authenticate with service',
+        });
+        
+      });
+  }
+    
+    
     render() {
       const { balance, loading, error } = this.state;
       const items = getItems();
@@ -89,15 +144,15 @@ class BankData extends Component {
           {items.allIds.length < 1 && (
             <div>
               <h3>Link to your bank account to view you account balance</h3>
-              <PlaidLink>
+              <PlaidLink
                   clientName="Budget+"
                   env="sandbox"
                   product={["auth", "transactions"]}
                   publicKey= {PUBLIC_KEY}
                   onExit={this.handleOnExit}
-                  onSuccess={this.onItemLinked.bind(this)}>
-                  Open Link and connect your bank!
-              </PlaidLink>
+                  onSuccess={this.onItemLinked.bind(this)}
+                  
+              />
             </div>
             
           )}
