@@ -22,12 +22,14 @@ class QuoteApp extends Component {
 
   render() {
     return (
-      <div className="App">
+      
 
-      <div className="jumbotron">
+      <div className="jumbotron jumbotron-fluid">
       <h2 className ="header"><strong>BUDGET+</strong></h2>
+      <RenderLogin/> <br/>
       <Quote quote = {this.state.quotes} />
-      <RenderLogin/>
+      <div className="App-bg">
+      
             
       </div>   
      
