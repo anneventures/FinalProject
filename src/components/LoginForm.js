@@ -1,9 +1,11 @@
 import React, { Component } from 'react'
 import { withRouter } from 'react-router'
 import { connect } from 'react-redux'
+import '../components/font.css'
 
 // semantic-ui
 import { Container, Form, Input, Button, Grid } from 'semantic-ui-react'
+import '../App.css';
 
 // alert
 import Alert from 'react-s-alert';

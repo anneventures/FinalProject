@@ -3,7 +3,7 @@ import '../App.css';
 
 import { Route, Switch } from 'react-router-dom'
 import Dashboard from './Dashboard'
-import Home from './Home'
+import Home from './home'
 import NoMatch from './NoMatch'
 import CreateAccont from './CreateAccont'
 import ExpensesForm from './ExpensesForm';
