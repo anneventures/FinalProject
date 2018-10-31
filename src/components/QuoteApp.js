@@ -5,7 +5,7 @@ import '../App.css'
 import Quote from './Quote';
 import RenderLogin from './RenderLogin';
 
-class App extends Component {
+class QuoteApp extends Component {
   constructor(props){
     super(props); 
     this.state = {
@@ -22,16 +22,15 @@ class App extends Component {
 
   render() {
     return (
-      <div className="background">
       <div className="App">
 
       <div className="jumbotron">
       <h2 className ="header"><strong>BUDGET+</strong></h2>
       <Quote quote = {this.state.quotes} />
-      </div>
-      </div>
-    
-     <RenderLogin/>
+      <RenderLogin/>
+            
+      </div>   
+     
     
       
       </div>
@@ -39,4 +38,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default QuoteApp;

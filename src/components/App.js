@@ -9,6 +9,7 @@ import CreateAccont from './CreateAccont'
 import ExpensesForm from './ExpensesForm';
 import FormulaChart from './FormulaChart';
 import BankData from './BankData';
+import QuoteApp from './QuoteApp';
 
 
 // alert
@@ -82,6 +83,10 @@ class App extends Component {
       <div className="App">
 
         <Switch>
+
+        <Route exact path = '/home' render ={()=>(
+          <QuoteApp />
+    )} />
 
           <Route exact path='/' render={() => (
             <Home />
