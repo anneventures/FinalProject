@@ -1,21 +1,21 @@
 import formula from './formula';
-import { withRouter } from 'react-router'
-import { connect } from 'react-redux'
 import React , {Component} from 'react';
 import {Doughnut} from 'react-chartjs-2';
 
 
+
 const formulaLabels = formula.map(formula => formula.Category);
-const formulaData = formula.map(formula => formula.Percent)
+const formulaData = formula.map(formula => (formula.Percent*40000/100/12).toFixed(2));
+const incomeData = formulaData.map(income=> (formulaData*income))
 
 const data = {
 	labels: formulaLabels,
 	datasets: [{
     data: formulaData,
     backgroundColor: [
-      '#FF6384',
-      '#36A2EB',
-      '#FFCE56',
+      'red',
+      'grey',
+      'orange',
       'blue',
       'yellow',
       'lightgreen',
