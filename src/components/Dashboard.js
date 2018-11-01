@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import { withRouter } from 'react-router'
 import { connect } from 'react-redux'
-import formula from './Formula/formula'
 
 import { LOCAL_STRAGE_KEY } from '../utils/Settings'
 
@@ -23,15 +22,9 @@ class Dashboard extends Component {
   }
 
   onSubmit = () => {
-    console.log("income" + this.state.income +" data: " + this.data)
     // after user enters annual income and clicks Submit button
 
     this.setState ({showGraph: true})
-
-
-    this.props.history.push("/formula")
-
-
     // const { income } = this.state
     // const params = {
     //   income: income,
@@ -117,6 +110,25 @@ class Dashboard extends Component {
             income = {this.state.income}
             /> : null }
             </Grid.Column>
+
+            <Grid.Column width={8}>
+            {this.state.showGraph ? 
+            <Button
+              style={{width: '50%'}}
+              type='button'
+              href='/bank_data'
+              > Sign in with Plaid
+            </Button> :null}
+            </Grid.Column>
+            <Grid.Column width={8}>
+            {this.state.showGraph ? 
+            <Button
+              style={{width: '50%'}}
+              type='button'
+              href='/expenses_report'
+              > Fill in your Expenses
+            </Button> :null}
+            </Grid.Column> 
 
             {/* <Grid.Column textAlign='left' width={16}>
               <Header as='h2'>Savings</Header>
