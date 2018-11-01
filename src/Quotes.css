@@ -1,8 +1,65 @@
+html, body{
+    background: #6ca3fc;
+}
+.header{
+   
+    font-family: 'Open Sans', sans-serif;
+    font-size :34px;
+}
+.quoteBox {
+    margin: 25px auto;
+    min-heigh: 200px; 
+    width: 85%; 
+    color: whitesmoke; 
+    display: flex; 
+    flex-direction: column;
+    align-items: center; 
+    display: -ms-flex; 
+    -ms-flex-direction: column; 
+    -ms-align-items: center; 
+    -ms-justify-content: center;
+}
+
+#quoteTxt {
+    font-family: 'Open Sans', sans-serif;
+    font-size :20px;
+    color:white;
+    background:black
+}
+
+#author {
+    display: block;
+    font-size: 15px; 
+    color: yellow;
+    background: black;
+}
+
+button{
+margin-bottom: 15px;
+  border: none;
+  color: #fff;
+  background: black;
+  padding: 10px;
+  border-radius: 25px;
+  outline: none; 
+}
+button:hover{
+    background:grey;
+}
+#btn{
+    margin-left: 20px;
+    padding: 20px
+}
+
 .App-bg{
-    background: url('./piggy.png')  no-repeat center center fixed; 
+background:black;
+background: url('./money_wallpaper.png')  no-repeat center center fixed; 
 height: 70%;
 position: absolute; 
 width: 100%;
+}
+.jumbotron{
+    text-align:center;
 }
 
 .Quotes{
@@ -13,5 +70,9 @@ width: 100%;
 
   .Login {
       text-align: center
+  }
+
+  .background{
+      background:black;
   }
 

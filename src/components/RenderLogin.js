@@ -13,7 +13,7 @@ render(){
     return (
         <div>
         <Link to = '/'>
-        <button className ="btn btn-success" onClick={this.setRedirect}>
+        <button id = "btn">
         <div className = "Login">Login</div> </button>
         </Link>
        
