@@ -59,3 +59,25 @@ export const logout = (params) =>
     },
     body: JSON.stringify( params )
   }).then(res => res.json())
+
+  //income
+export const income = (params) => 
+  fetch(`${api}/set_income`, {
+    method: 'POST' ,
+    headers: {
+      ...headers,
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify( params )
+  }).then(res => res.json())
+
+//expenses
+export const expenses = (params) =>
+  fetch(`${api}/set_expenses`, {
+    method: 'POST',
+    headers: {
+      ...headers,
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify( params )
+  }).then(res => res.json())
