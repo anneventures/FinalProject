@@ -411,6 +411,4 @@ exports.set_expenses = (req, res) => {
     .catch((err) => {
       res.json({status: 'error', detail: err})
   })
-};
-
-
+}
