@@ -24,11 +24,32 @@ class Dashboard extends Component {
   onSubmit = () => {
     // after user enters annual income and clicks Submit button
 
-    this.setState ({showGraph: true})
-    // const { income } = this.state
-    // const params = {
-    //   income: income,
-    // }
+    this.setState ({showGraph: true});
+
+
+    //push to databse
+    let income = this.state.income;
+    const params = {income: income}
+    MyAPI.income(params)
+    .then((data) => {
+
+      return new Promise((resolve, reject) => {
+
+        if (data.status !== 'success'){
+          let error_text = 'Error';
+          if (data.detail){
+            error_text = data.detail
+          }
+          reject(error_text)
+
+        
+        }
+      })
+    })
+    .catch((err) => {
+      console.log("err:", err)
+
+    })
 
   }  
 
