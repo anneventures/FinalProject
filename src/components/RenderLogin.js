@@ -12,10 +12,13 @@ render(){
 
     return (
         <div>
+        <footer>
         <Link to = '/'>
-        <button id = "btn">
-        <div className = "Login">Login</div> </button>
+        <button id = "btn btn-primary btn-lg btn-block">
+        Login </button>
         </Link>
+        </footer>
+        
        
         </div>
     )

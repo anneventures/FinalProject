@@ -1,10 +1,17 @@
-html, body{
-    background: #6ca3fc;
+.quoteApp{ 
+    background: rgb(255, 196, 243);
+    -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+
 }
 .header{
-   
+   padding-top:10%;
     font-family: 'Open Sans', sans-serif;
-    font-size :34px;
+    font-size :60px;
+    color: whitesmoke;
 }
 .quoteBox {
     margin: 25px auto;
@@ -21,39 +28,40 @@ html, body{
 }
 
 #quoteTxt {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Pacifico', cursive;
     font-size :20px;
-    color:white;
-    background:black
+    color:black;
+    
 }
 
 #author {
     display: block;
     font-size: 15px; 
-    color: yellow;
-    background: black;
+    color: #BDB76B;
+    float:right;
 }
 
 button{
 margin-bottom: 15px;
   border: none;
   color: #fff;
-  background: black;
+  background: rgb(4, 177, 39);
   padding: 10px;
   border-radius: 25px;
   outline: none; 
 }
 button:hover{
-    background:grey;
+    color: rgb(4, 177, 39);
+    background:#fff; 
 }
-#btn{
+#butn{
     margin-left: 20px;
     padding: 20px
 }
 
 .App-bg{
-background:black;
-background: url('./money_wallpaper.png')  no-repeat center center fixed; 
+background:"#FFE4C4";
+background: url('./money_wallpaper.pdf')  no-repeat center center fixed; 
 height: 70%;
 position: absolute; 
 width: 100%;
@@ -64,7 +72,7 @@ width: 100%;
 
 .Quotes{
     list-style-type: none;
-    font-family: 'Open Sans', sans-serif;
+    
     margin-bottom: 40px;
   }
 
@@ -78,7 +86,10 @@ background-color: aqua;
       text-align: center
   }
 
-  .background{
-      background:black;
-  }
-
+#footer{
+    clear: both;
+    position: relative;
+    z-index: 10;
+    height: 3em;
+    margin-top: 30.5em;
+}
