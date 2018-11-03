@@ -13,7 +13,6 @@ class Home extends Component {
   render() {
 
     return(
-    <div className="box1">
       <Container className='home' style={{textAlign: 'center'}}>
        <h1>BUDGET+</h1>
 
@@ -26,7 +25,6 @@ class Home extends Component {
         </Grid>
 
       </Container>
-    </div>
     )
   }
 }
