@@ -3,11 +3,7 @@ import sha256 from 'sha256'
 import crypto from 'crypto'
 import bcrypt from 'bcrypt'
 
-
-
-
-// change this
-const db_name = 'example_db'
+const db_name = 'budget_db'
 
 // Connection URL
 import MongoDbHelper from './MongoDbHelper';
@@ -15,6 +11,9 @@ let url = 'mongodb://localhost:27017/'+db_name;
 let mongoDbHelper = new MongoDbHelper(url);
 
 const API_KEY = '__api_key__'
+
+//global user ID set on login//
+var loggedInID;
 
 // start connection
 mongoDbHelper.start(() => {
@@ -126,6 +125,7 @@ exports.create_user = (req, res) => {
     }
 
     user_info._id = results._id;
+    loggedInID = results._id;
     user_info.profile = results.profile;
 
     // req.session.userId = user_info._id
@@ -178,6 +178,7 @@ exports.login_with_email_password = (req, res) => {
 
       // set user info
       user_info._id = results._id;
+      loggedInID = results._id
       user_info.profile = results.profile;
 
       let password2 = sha256(password)
@@ -357,4 +358,57 @@ exports.login_with_token = (req, res) => {
   })
 }
 
+exports.set_income = (req, res) => {
+  let income = req.body.income
 
+  let find_param = {_id: loggedInID}
+
+  let upd_param = {
+    '$push': {
+      'income': income
+    }
+  }
+  // update
+  mongoDbHelper.collection("users").update(find_param, upd_param)
+
+    .catch((err) => {
+      res.json({status: 'error', detail: err})
+  })
+
+}
+
+exports.set_expenses = (req, res) => {
+  let housing =  req.body.housing;
+  let utilities = req.body.utilities;
+  let transportation = req.body.transportation;
+  let food = req.body.food;
+  let entertainment = req.body.entertainment;
+  let debt = req.body.debt;
+  let personal =  req.body.personal;
+  let savings= req.body.savings;
+  let expenses = {
+    'housing': housing,
+    'utilities': utilities,
+    'transportation': transportation,
+    'food': food,
+    'entertainment': entertainment,
+    'debt': debt,
+    'personal': personal,
+    'savings': savings
+  }
+
+  let find_param = {_id: loggedInID};
+
+  let upd_param = {
+    '$push':{
+      'expenses': expenses
+    }
+  }
+ 
+  // update
+  mongoDbHelper.collection("users").update(find_param, upd_param)
+
+    .catch((err) => {
+      res.json({status: 'error', detail: err})
+  })
+}

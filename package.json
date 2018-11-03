@@ -37,7 +37,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "start_server": "babel-node server"
+    "start_server": "babel-node server",
+    "proxy": "localhost:4002/"
   },
   "author": "Ko Ohashi",
   "license": "MIT",
