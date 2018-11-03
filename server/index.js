@@ -4,7 +4,19 @@ import express from 'express'
 
 import session from 'express-session'
 
+
+
+
+
+
 const app = express()
+
+
+
+// const ACCESS_TOKEN = null;
+// const PUBLIC_TOKEN = null;
+// const ITEM_ID = null;
+
 
 import bodyParser from 'body-parser'
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -38,5 +50,12 @@ app.post('/login_with_email_password', api.login_with_email_password);
 app.post('/login_with_token', api.login_with_token);
 app.post('/logout', api.logout);
 
+
+
+
+
+
 app.listen(port);
 console.log('Listening on port '+port+'...');
+
+
