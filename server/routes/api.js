@@ -3,9 +3,6 @@ import sha256 from 'sha256'
 import crypto from 'crypto'
 import bcrypt from 'bcrypt'
 
-
-
-
 // change this
 const db_name = 'example_db'
 

@@ -12,7 +12,9 @@ const PLAID_ENV= 'sandbox'
 
 class BankData extends Component {
   handleOnSuccess(token, metadata) {
-    // send token to client server
+    console.log(token);
+    console.log(metadata);
+   
   }
   handleOnExit() {
     // handle the case when your user exits Link
