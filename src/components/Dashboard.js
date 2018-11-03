@@ -11,23 +11,25 @@ import { Container, Form, Input, Button, Grid, Header } from 'semantic-ui-react'
 // API
 import * as MyAPI from '../utils/MyAPI'
 
+//chart
+import FormulaChart from './Formula/FormulaChart';
+
 class Dashboard extends Component {
 
   state = {
-    income: 0
+    income: 0,
+    showGraph: false
   }
-  
-  onSubmit = () => {
 
+  onSubmit = () => {
     // after user enters annual income and clicks Submit button
 
-    this.props.history.push("/formula")
-
-
+    this.setState ({showGraph: true})
     // const { income } = this.state
     // const params = {
     //   income: income,
     // }
+
   }  
 
   logoutRequest = () => {
@@ -61,6 +63,7 @@ class Dashboard extends Component {
     const { user } = this.props
 
     const { income } = this.state
+  
     
 
     return(
@@ -101,6 +104,31 @@ class Dashboard extends Component {
                 disabled={this.state.loading}
                 type='submit'>Calculate</Button>
             </Grid.Column>
+            
+            <Grid.Column width={16}>
+            {this.state.showGraph ? <FormulaChart
+            income = {this.state.income}
+            /> : null }
+            </Grid.Column>
+
+            <Grid.Column width={8}>
+            {this.state.showGraph ? 
+            <Button
+              style={{width: '50%'}}
+              type='button'
+              href='/bank_data'
+              > Sign in with Plaid
+            </Button> :null}
+            </Grid.Column>
+            <Grid.Column width={8}>
+            {this.state.showGraph ? 
+            <Button
+              style={{width: '50%'}}
+              type='button'
+              href='/expenses_report'
+              > Fill in your Expenses
+            </Button> :null}
+            </Grid.Column> 
 
             {/* <Grid.Column textAlign='left' width={16}>
               <Header as='h2'>Savings</Header>
@@ -123,7 +151,6 @@ class Dashboard extends Component {
     )
   }
 }
-
 // react-redux
 function mapStateToProps ( {user} ) {
   return {

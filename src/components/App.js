@@ -3,11 +3,11 @@ import '../App.css';
 
 import { Route, Switch } from 'react-router-dom'
 import Dashboard from './Dashboard'
-import Home from './Home'
+import Home from './home'
 import NoMatch from './NoMatch'
 import CreateAccont from './CreateAccont'
 import ExpensesForm from './ExpensesForm';
-import FormulaChart from './FormulaChart';
+import FormulaChart from './Formula/index';
 import BankData from './BankData';
 import QuoteApp from './QuoteApp';
 
