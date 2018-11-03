@@ -4,7 +4,19 @@ import express from 'express'
 
 import session from 'express-session'
 
+
+
+
+
+
 const app = express()
+
+
+
+// const ACCESS_TOKEN = null;
+// const PUBLIC_TOKEN = null;
+// const ITEM_ID = null;
+
 
 import bodyParser from 'body-parser'
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -40,5 +52,12 @@ app.post('/logout', api.logout);
 app.post('/set_expenses', api.set_expenses);
 app.post('/set_income', api.set_income);
 
+
+
+
+
+
 app.listen(port);
 console.log('Listening on port '+port+'...');
+
+
