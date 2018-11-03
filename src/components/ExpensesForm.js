@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 import { withRouter } from 'react-router'
 import { connect } from 'react-redux'
 
+import * as MyAPI from '../utils/MyAPI'
+
 // semantic-ui
 import { Container, Form, Input, Button, Grid } from 'semantic-ui-react'
 
@@ -9,7 +11,6 @@ class ExpensesForm extends Component {
 //grab user key to associate with form
 //hidden field
     state = {
-        income: null,
         housing: null,
         utilities: null,
         transportation: null,
@@ -26,37 +27,45 @@ class ExpensesForm extends Component {
 
     onSubmit = () => {
 
-//            handle the form submit
+      const {housing, utilities, transportation, food, entertainment, debt, personal, savings } = this.state
+      const params = {housing: housing, utilities: utilities, transportation: transportation , food: food, 
+        entertainment:entertainment, debt: debt, personal: personal, savings: savings}
 
+      MyAPI.expenses(params)
+      .then((data) => {
+
+        return new Promise((resolve, reject) => {
+  
+          if (data.status !== 'success'){
+            let error_text = 'Error';
+            if (data.detail){
+              error_text = data.detail
+            }
+            reject(error_text)
+  
+          
+          }
+        })
+      })
+      .catch((err) => {
+        console.log("err:", err)
+
+      })
     }
-    
       render() {
-    
-        const { income, housing, utilities, transportation, food, entertainment, debt, personal, savings } = this.state
-    
-        return(
+
+        return(          
           <Container text className='create_acount_form'>
           
             <Form onSubmit={this.onSubmit} style={{marginTop:60}}>
               <Grid>
-    
-                <Grid.Column textAlign='left' width={16}>
-                  <label>Income</label>
-                  <Input
-                    style={{width: '100%'}}
-                    name='income'
-                    onChange={this.handleChange}
-                    value= {income}
-                    placeholder='annual income' />
-                </Grid.Column>
-    
+        
                 <Grid.Column textAlign='left' width={16}>
                   <label>Housing</label>
                   <Input
                     style={{width: '100%'}}
                     name='housing'
                     onChange={this.handleChange}
-                    value={housing}
                     placeholder='rent/mortgage payments' />
                 </Grid.Column>
 
@@ -66,7 +75,6 @@ class ExpensesForm extends Component {
                     style={{width: '100%'}}
                     name='utilities'
                     onChange={this.handleChange}
-                    value={utilities}
                     placeholder='utilities' />
                 </Grid.Column>
 
@@ -76,7 +84,6 @@ class ExpensesForm extends Component {
                     style={{width: '100%'}}
                     name='transportation'
                     onChange={this.handleChange}
-                    value={transportation}
                     placeholder='Gas, insurance, metropass and taxis ' />
                 </Grid.Column>
 
@@ -86,7 +93,6 @@ class ExpensesForm extends Component {
                     style={{width: '100%'}}
                     name='food'
                     onChange={this.handleChange}
-                    value={food}
                     placeholder='annual income' />
                 </Grid.Column>
 
@@ -96,7 +102,6 @@ class ExpensesForm extends Component {
                     style={{width: '100%'}}
                     name='entertainment'
                     onChange={this.handleChange}
-                    value={entertainment}
                     placeholder='Movies, concerts, etc.' />
                 </Grid.Column>
 
@@ -106,7 +111,6 @@ class ExpensesForm extends Component {
                     style={{width: '100%'}}
                     name='debt'
                     onChange={this.handleChange}
-                    value={debt}
                     placeholder='Monthly debt payments' />
                 </Grid.Column>
 
@@ -114,9 +118,8 @@ class ExpensesForm extends Component {
                   <label>Personal</label>
                   <Input
                     style={{width: '100%'}}
-                    name='income'
+                    name='personal'
                     onChange={this.handleChange}
-                    value={personal}
                     placeholder='Clothing, Cosmetics, etc.' />
                 </Grid.Column>
 
@@ -124,9 +127,8 @@ class ExpensesForm extends Component {
                   <label>Savings</label>
                   <Input
                     style={{width: '100%'}}
-                    name='income'
+                    name='savings'
                     onChange={this.handleChange}
-                    value={savings}
                     placeholder='savings' />
                 </Grid.Column>
 
@@ -137,7 +139,7 @@ class ExpensesForm extends Component {
                 </Grid.Column>
     
               </Grid>
-    
+                 
             </Form>
     
           </Container>

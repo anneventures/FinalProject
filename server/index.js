@@ -49,6 +49,8 @@ app.post('/create_user', api.create_user);
 app.post('/login_with_email_password', api.login_with_email_password);
 app.post('/login_with_token', api.login_with_token);
 app.post('/logout', api.logout);
+app.post('/set_expenses', api.set_expenses);
+app.post('/set_income', api.set_income);
 
 
 
