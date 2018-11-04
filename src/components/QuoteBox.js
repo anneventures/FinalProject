@@ -1,5 +1,5 @@
 import React from 'react';
-import QuoteItem from './Buttons';
+import Buttons from './Buttons';
 class QuoteBox extends React.Component{
 
 render(){

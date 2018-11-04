@@ -1,66 +1,78 @@
-html, body{
-    background: #6ca3fc;
+.homeApp{ 
+    background: rgb(255, 196, 243);
+    -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 .header{
-   
-    font-family: 'Open Sans', sans-serif;
-    font-size :34px;
+    padding-top:10%;
+   	font-family: 'Open Sans', sans-serif;
+    font-size :60px;
+    color: whitesmoke;
+    background: rgb(255, 196, 243);
 }
 .quoteBox {
+    background-color: black;
     margin: 25px auto;
-    min-heigh: 200px; 
-    width: 85%; 
-    color: whitesmoke; 
+    min-height: 100px; 
+    width: 85%;  
     display: flex; 
     flex-direction: column;
     align-items: center; 
     display: -ms-flex; 
     -ms-flex-direction: column; 
     -ms-align-items: center; 
-    -ms-justify-content: center;
 }
 
 #quoteTxt {
-    font-family: 'Open Sans', sans-serif;
-    font-size :20px;
-    color:white;
-    background:black
+    /*We might have to change the font-family for this one */
+    font-family: 'Pacifico', cursive;
+    font-size :30px;	    	    
+    color: rgb(255, 196, 243);
 }
 
 #author {
+    margin-top: 5%;
+    font-family: 'Pacifico', cursive;
     display: block;
-    font-size: 15px; 
-    color: yellow;
-    background: black;
+    font-size: 20px; 
+    color: #BDB76B;
+    background: black;	    
+    float:right;
+    margin-left:70%;
 }
 
 button{
-margin-bottom: 15px;
-  border: none;
-  color: #fff;
-  background: black;
-  padding: 10px;
-  border-radius: 25px;
-  outline: none; 
+    margin-bottom: 15px;
+    border: none;	  
+    color: #fff;	  
+    background: rgb(4, 177, 39);
+    padding: 10px;	  
+    border-radius: 25px;	  
+    outline: none; 	
 }
+
 button:hover{
-    background:grey;
-}
-#btn{
-    margin-left: 20px;
-    padding: 20px
+    color: rgb(4, 177, 39);
+    background:#fff; 
+}	
+
+#butn{
+    margin-right: 300px;
+  padding:10px;
+    float:left;
+    
 }
 
 .App-bg{
-background:black;
-background: url('./money_wallpaper.png')  no-repeat center center fixed; 
+background: rgb(255, 196, 243);
+background: url('./finance.png')  repeat center center fixed;
 height: 70%;
-position: absolute; 
+position: static; 
 width: 100%;
 }
-.jumbotron{
-    text-align:center;
-}
+
 
 .Quotes{
     list-style-type: none;
@@ -68,17 +80,4 @@ width: 100%;
     margin-bottom: 40px;
   }
 
-.Container {
-width: 100px;
-height: 100px;
-background-color: aqua;
-}
-
-  .Login {
-      text-align: center
-  }
-
-  .background{
-      background:black;
-  }
 

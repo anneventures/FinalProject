@@ -3,8 +3,8 @@ import '../Quotes.css'
 class Buttons extends Component{
 render(){
     return(
-        <div>
-        <button id = "btn" onClick = {this.props.onClick}> Change Color </button>
+        <div id = 'butn'>
+        <button id = "butn" onClick = {this.props.onClick}> Inspire me </button>
         </div>
     )
 }
