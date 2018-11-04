@@ -51,35 +51,33 @@ display(){
 }
   //Change background/txt color onClick
 
-  changeBg(){
-    var colors = [ "grey", "#FFE4C4", "#00FFF", "BDB76B", "E9967A"];
-    var randColor = Math.floor( Math.random() * colors.length )
-    document.body.style.background = colors[randColor];
-
-    document.getElementById('btn').style.color = colors[randColor];
-  }
+  
 
   onClick(){
     this.getQuote();
-    this.changeBg();
+    
   }
   
   render() {
     return (
       
-<div>
+<div className='homeApp'>
       
       <h2 className ="header"><strong>BUDGET+</strong></h2>
-      <br/>
+      
       
        
-       <div>
+       
        <div className="App-bg">
-      <QuoteBox />
-      <div className="btn-group">
-    
-      <Buttons onClick = {this.onClick}
+       <div className ="quoteBox">
+       <QuoteBox />
+       <Buttons onClick = {this.onClick}
        />
+       </div>
+      
+    
+    
+    
 
        <RenderLogin/> 
     </div>  
@@ -87,11 +85,11 @@ display(){
       
       
             
-      </div>   
+
      
     
       </div>
-      </div>
+      
     );
   }
 }
