@@ -17,5 +17,4 @@ return(
   }
 }
        
-        
 export default QuoteBox;
