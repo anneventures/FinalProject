@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 import { withRouter } from 'react-router'
 import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
+// import '../components/font.css'
+import '../Quotes.css'
 
 // semantic-ui
 import { Container, Grid } from 'semantic-ui-react'
@@ -13,8 +15,11 @@ class Home extends Component {
   render() {
 
     return(
-      <Container className='home' style={{textAlign: 'center'}}>
+    // <div className='box1'>  
+      <Container className='home'>
+      <div className='box1'>
        <h1>BUDGET+</h1>
+      </div>
 
         <LoginForm />
 
@@ -25,6 +30,7 @@ class Home extends Component {
         </Grid>
 
       </Container>
+    // </div>
     )
   }
 }

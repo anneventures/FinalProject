@@ -50,9 +50,7 @@ display(){
   document.getElementById("author").innerHTML = "-" +author;
 }
   //Change background/txt color onClick
-
   
-
   onClick(){
     this.getQuote();
     
@@ -63,32 +61,19 @@ display(){
       
 <div className='homeApp'>
       
-      <h2 className ="header"><strong>BUDGET+</strong></h2>
-      
-      
-       
-       
+      <h1>BUDGET+</h1>
+
        <div className="App-bg">
-       <div className ="quoteBox">
-       <QuoteBox />
-       <Buttons onClick = {this.onClick}
-       />
+        <div className ="quoteBox">
+          <QuoteBox />
+          <Buttons onClick = {this.onClick}
+          />
+          <RenderLogin/> 
        </div>
-      
-    
-    
-    
 
-       <RenderLogin/> 
+       {/* <RenderLogin/>  */}
     </div>  
-
-      
-      
-            
-
-     
-    
-      </div>
+</div>
       
     );
   }

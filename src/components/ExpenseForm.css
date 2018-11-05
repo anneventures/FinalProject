@@ -1,0 +1,6 @@
+.App-bg{
+    background: url('./money_wallpaper.jpg')  no-repeat center center fixed; 
+    height: 70%;
+    position: absolute; 
+    width: 100%;
+    }

@@ -1,21 +1,46 @@
 .homeApp{ 
-    background: rgb(255, 196, 243);
-    -webkit-background-size: cover;
+    /* background-color: rgb(32, 209, 189); */
+    background: linear-gradient(to bottom, #20D1BD 10%, #ff99cc 110%);
+    padding: 11%;
+    /* margin-bottom: 100%; */
+}    
+
+.box1 {
+    width: 50%;
+    height: 30%;
+}
+
+    /* -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-  background-size: cover;
+  background-size: cover; */
+
+
+.homeApp h1{
+    /* font-family: 'Bevan', cursive; */
+    font-family: 'Paytone One', sans-serif;
+    font-weight: 900;
+    color: black;
+    font-size: 600%;
+    text-shadow: 4px 4px rgb(0, 0, 0, 0.5);
+    letter-spacing: 3px;
+    /* padding-bottom: 13%; */
 }
-.header{
-    padding-top:10%;
+
+
+
+/* .header{
+    padding-bottom:1450%;
    	font-family: 'Open Sans', sans-serif;
     font-size :60px;
     color: whitesmoke;
     background: rgb(255, 196, 243);
-}
+} */
 .quoteBox {
     background-color: black;
+    opacity: 0.90;
     margin: 25px auto;
-    min-height: 100px; 
+    min-height:20%;
     width: 85%;  
     display: flex; 
     flex-direction: column;
@@ -23,55 +48,64 @@
     display: -ms-flex; 
     -ms-flex-direction: column; 
     -ms-align-items: center; 
+    box-shadow: 0 15px 20px 5px rgba(0, 0, 0, 0.5);
+    /* border-top: 1px solid #fff; */
 }
 
 #quoteTxt {
     /*We might have to change the font-family for this one */
-    font-family: 'Pacifico', cursive;
+    font-family: 'Satisfy', cursive;
     font-size :30px;	    	    
     color: rgb(255, 196, 243);
+    margin-top: 5%;
+    text-shadow: 1px 1px rgba(255, 255, 255, 0.5);
 }
 
 #author {
     margin-top: 5%;
-    font-family: 'Pacifico', cursive;
+    font-family: 'Satisfy', cursive;
     display: block;
     font-size: 20px; 
-    color: #BDB76B;
+    color: rgb(23, 148, 133);
     background: black;	    
     float:right;
-    margin-left:70%;
+    margin-left:75%;
 }
 
 button{
-    margin-bottom: 15px;
+    margin-bottom: 50%;
+    margin-left: 25%;
     border: none;	  
     color: #fff;	  
-    background: rgb(4, 177, 39);
+    background: #20D1BD;
     padding: 10px;	  
     border-radius: 25px;	  
-    outline: none; 	
+    outline: none;
+    box-shadow: 0 3px 3px 3px rgba(255, 255, 255, 0.37);
+    /* float:right; 	 */
+
 }
 
 button:hover{
-    color: rgb(4, 177, 39);
-    background:#fff; 
+    color: black;
+    background: #ec91bf; 
 }	
 
 #butn{
-    margin-right: 300px;
+  margin-right: 300px;
   padding:10px;
-    float:left;
+  font-size: 110%;
+  /* float:left; */
     
 }
 
-.App-bg{
+/* .App-bg{
 background: rgb(255, 196, 243);
 background: url('./finance.png')  repeat center center fixed;
 height: 70%;
 position: static; 
 width: 100%;
-}
+} */
 
 
 .Quotes{
@@ -80,4 +114,7 @@ width: 100%;
     margin-bottom: 40px;
   }
 
+.Login{
+    font-size: 110%;
+}
 
