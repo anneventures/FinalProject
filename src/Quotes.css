@@ -2,7 +2,6 @@
     /* background-color: rgb(32, 209, 189); */
     background: linear-gradient(to bottom, #20D1BD 10%, #ff99cc 110%);
     padding: 11%;
-    /* margin-bottom: 100%; */
 }    
 
 .box1 {
@@ -10,34 +9,20 @@
     height: 30%;
 }
 
-    /* -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover; */
-
-
 .homeApp h1{
-    /* font-family: 'Bevan', cursive; */
     font-family: 'Paytone One', sans-serif;
     font-weight: 900;
-    color: black;
+    color: #eef73b;
     font-size: 600%;
     text-shadow: 4px 4px rgb(0, 0, 0, 0.5);
     letter-spacing: 3px;
-    /* padding-bottom: 13%; */
 }
 
 
 
-/* .header{
-    padding-bottom:1450%;
-   	font-family: 'Open Sans', sans-serif;
-    font-size :60px;
-    color: whitesmoke;
-    background: rgb(255, 196, 243);
-} */
+
 .quoteBox {
-    background-color: black;
+    background-color:#90f73b;
     opacity: 0.90;
     margin: 25px auto;
     min-height:20%;
@@ -48,7 +33,7 @@
     display: -ms-flex; 
     -ms-flex-direction: column; 
     -ms-align-items: center; 
-    box-shadow: 0 15px 20px 5px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 5px 5px 5px rgb(255, 196, 243);
     /* border-top: 1px solid #fff; */
 }
 
@@ -56,7 +41,7 @@
     /*We might have to change the font-family for this one */
     font-family: 'Satisfy', cursive;
     font-size :30px;	    	    
-    color: rgb(255, 196, 243);
+    color: rgba(0, 0, 0, 0.5);
     margin-top: 5%;
     text-shadow: 1px 1px rgba(255, 255, 255, 0.5);
 }
@@ -66,8 +51,7 @@
     font-family: 'Satisfy', cursive;
     display: block;
     font-size: 20px; 
-    color: rgb(23, 148, 133);
-    background: black;	    
+    color: rgb(23, 148, 133);    
     float:right;
     margin-left:75%;
 }
@@ -91,14 +75,22 @@ button:hover{
     background: #ec91bf; 
 }	
 
-#butn{
+#btn{
   margin-right: 300px;
   padding:10px;
   font-size: 110%;
   /* float:left; */
     
 }
-
+#btnLogin {
+    float:right;
+}
+#btnQuote{
+    float:left
+}
+.btnBox{
+    margin-bottom:20px;
+}
 /* .App-bg{
 background: rgb(255, 196, 243);
 background: url('./finance.png')  repeat center center fixed;
