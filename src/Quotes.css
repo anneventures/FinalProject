@@ -22,7 +22,7 @@
 
 
 .quoteBox {
-    background-color:#90f73b;
+    background-color: rgba(0, 0, 0, 0.5);  
     opacity: 0.90;
     margin: 25px auto;
     min-height:20%;
@@ -33,7 +33,7 @@
     display: -ms-flex; 
     -ms-flex-direction: column; 
     -ms-align-items: center; 
-    box-shadow: 0 5px 5px 5px rgb(255, 196, 243);
+    box-shadow: 0 5px 5px 5px #eef73b;
     /* border-top: 1px solid #fff; */
 }
 
@@ -41,7 +41,7 @@
     /*We might have to change the font-family for this one */
     font-family: 'Satisfy', cursive;
     font-size :30px;	    	    
-    color: rgba(0, 0, 0, 0.5);
+    color: #90f73b;
     margin-top: 5%;
     text-shadow: 1px 1px rgba(255, 255, 255, 0.5);
 }
@@ -72,7 +72,8 @@ button{
 
 button:hover{
     color: black;
-    background: #ec91bf; 
+    background:  #eef73b;
+    font-size:1.5em;    
 }	
 
 #btn{
@@ -86,7 +87,8 @@ button:hover{
     float:right;
 }
 #btnQuote{
-    float:left
+    color: #20D1BD;
+    background-color:
 }
 .btnBox{
     margin-bottom:20px;
@@ -106,7 +108,11 @@ width: 100%;
     margin-bottom: 40px;
   }
 
-.Login{
-    font-size: 110%;
+.footer{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    font-size:20px;
+  
 }
-
