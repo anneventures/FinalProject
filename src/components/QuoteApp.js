@@ -68,10 +68,10 @@ display(){
           <QuoteBox />
           <Buttons onClick = {this.onClick}
           />
-          <RenderLogin/> 
+          
        </div>
 
-       {/* <RenderLogin/>  */}
+       <RenderLogin/> 
     </div>  
 </div>
       

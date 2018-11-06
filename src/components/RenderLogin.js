@@ -11,9 +11,9 @@ render(){
     
 
     return (
-        <div>
-        <Link to = '/'>
-        <button id = "btn">
+        <div className = 'footer'>
+        <Link to = '/login'>
+        <button id = "btn btnQuote" className="btn btn-lg btn-block">
         <div className = "Login">Login</div> </button>
         </Link>
        
