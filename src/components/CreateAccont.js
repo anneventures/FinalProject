@@ -20,6 +20,7 @@ class CreateAccont extends Component {
     return(
 
       <Container className="create" style={{textAlign: 'center'}}>
+      <div className="box1">
        <h1>BUDGET+</h1>
 
         <CreateAccontForm />
@@ -32,7 +33,7 @@ class CreateAccont extends Component {
           </Grid.Column>
         </Grid>
 
-
+      </div>
       </Container>
 
     )

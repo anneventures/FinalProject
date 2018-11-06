@@ -87,7 +87,7 @@ class LoginForm extends Component {
         <Form onSubmit={this.onSubmit} style={{marginTop:60}}>
           <Grid>
 
-            <Grid.Column textAlign='left' width={16}>
+            <Grid.Column textAlign='left' width={14}>
               <label>Email</label>
               <Input
                 style={{width: '100%'}}
@@ -99,7 +99,7 @@ class LoginForm extends Component {
                 placeholder='yourname@example.com' />
             </Grid.Column>
 
-            <Grid.Column textAlign='left' width={16}>
+            <Grid.Column textAlign='left' width={14}>
               <label>Password</label>
               <Input
                 style={{width: '100%'}}
@@ -111,7 +111,7 @@ class LoginForm extends Component {
                 placeholder='********' />
             </Grid.Column>
 
-            <Grid.Column  width={16}>
+            <Grid.Column  width={14}>
               <Button
                 style={{width: '100%'}}
                 loading={this.state.loading}

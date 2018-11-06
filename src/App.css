@@ -11,14 +11,13 @@
 
 .App-title {
   font-size: 1.5em;
-  color: whitesmoke;
 }
 
 .App-intro {
   font-size: large;
 }
 
-.doughnut{
-  height: 75%;
-  width: 60%;
-}
+h2{
+  margin-left: 120%;
+  }
+
