@@ -40,6 +40,7 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "start_server": "babel-node server",
+    "start": "npm run start_react && npm run start_server",
     "proxy": "localhost:4002/"
   },
   "author": "Ko Ohashi",
