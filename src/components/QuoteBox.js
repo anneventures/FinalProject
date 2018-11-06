@@ -16,5 +16,5 @@ return(
     );
   }
 }
-       
+        
 export default QuoteBox;

@@ -19,7 +19,7 @@ class Home extends Component {
       <Container className='home'>
       <div className='box1'>
        <h1>BUDGET+</h1>
-      </div>
+      
 
         <LoginForm />
 
@@ -28,9 +28,9 @@ class Home extends Component {
             <Link to="/create_acount">Create an account</Link>
           </Grid.Column>
         </Grid>
-
+        </div>
       </Container>
-    // </div>
+    
     )
   }
 }
