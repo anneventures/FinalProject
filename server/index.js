@@ -51,6 +51,7 @@ app.post('/login_with_token', api.login_with_token);
 app.post('/logout', api.logout);
 app.post('/set_expenses', api.set_expenses);
 app.post('/set_income', api.set_income);
+app.post('/get_access_token', api.get_access_token);
 
 
 

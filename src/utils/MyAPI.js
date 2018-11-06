@@ -81,3 +81,16 @@ export const expenses = (params) =>
     },
     body: JSON.stringify( params )
   }).then(res => res.json())
+
+  export const get_access_token = function(url = ``, data = {}) {
+
+    return fetch(url, {
+      method: "POST",
+      mode: 'cors',
+      headers: {
+        'Content-Type': 'application/json; charset=utf-8',
+
+      },
+      body: JSON.stringify(data)
+    }).then(response => response.json());
+}
