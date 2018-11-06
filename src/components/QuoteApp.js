@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import '../Quotes.css'
-
 import '../App.css'
 
 import QuoteBox from './QuoteBox';

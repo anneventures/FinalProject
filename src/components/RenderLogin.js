@@ -1,7 +1,5 @@
 import React from 'react';
-import {Redirect} from 'react-router-dom';
-
-import {Link} from 'react-router-dom'
+import {Redirect, Link} from 'react-router-dom';
 
 class RenderLogin extends React.Component{
 

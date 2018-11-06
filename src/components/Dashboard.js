@@ -7,6 +7,8 @@ import { LOCAL_STRAGE_KEY } from '../utils/Settings'
 //semantic-ui
 import { Container, Form, Input, Button, Grid, Header } from 'semantic-ui-react'
 
+import '../Dashboard.css'
+import { Button as BSButton } from 'reactstrap';
 
 // API
 import * as MyAPI from '../utils/MyAPI'
@@ -88,16 +90,16 @@ class Dashboard extends Component {
     
 
     return(
-      <div className='dashboard' style={{textAlign: 'center'}}>
+      <div className='dashboard'>
 
         <div style={{marginTop:60}}>
-          <div>
-            <span style={{cursor: 'pointer'}} onClick={() => this.logoutRequest()}>logout</span>
-          </div>
+          <BSButton color="danger" className = "logout">
+          <span style={{cursor: 'pointer'}} onClick={() => this.logoutRequest()}>logout</span>
+          </BSButton>
         </div>
 
         <div>
-          <div>
+          <div className="incomeBox">
             { JSON.stringify(user)}
 
             <Container text className='create_acount_form'>
@@ -105,8 +107,8 @@ class Dashboard extends Component {
             <Form onSubmit={this.onSubmit} style={{marginTop:60}}>
               
             <Grid>
-            <Grid.Column textAlign='left' width={16}>              
-              <Header as='h1'>What is your annual income?</Header>
+            <Grid.Column  width={16}>              
+              <Header as='h2' className="header">What is your annual income?</Header>
               <p>Please enter you annual income below then click the <em>Calculate</em> button to see how much of your income you should save towards your goal(s).</p>
               <Input
                 style={{width: '100%'}}
@@ -119,14 +121,14 @@ class Dashboard extends Component {
             </Grid.Column>
                 
             <Grid.Column width={16}>
-              <Button
-                style={{width: '100%'}}
+              <BSButton color="info"
+                style={{width: '25%'}}
                 loading={this.state.loading}
                 disabled={this.state.loading}
-                type='submit'>Calculate</Button>
+                type='submit'>Calculate</BSButton>
             </Grid.Column>
             
-            <Grid.Column width={16}>
+            <Grid.Column width={16} >
             {this.state.showGraph ? <FormulaChart
             income = {this.state.income}
             /> : null }
@@ -134,21 +136,19 @@ class Dashboard extends Component {
 
             <Grid.Column width={8}>
             {this.state.showGraph ? 
-            <Button
+            <BSButton color="primary"
               style={{width: '50%'}}
-              type='button'
               href='/bank_data'
               > Sign in with Plaid
-            </Button> :null}
+            </BSButton> :null}
             </Grid.Column>
             <Grid.Column width={8}>
             {this.state.showGraph ? 
-            <Button
+            <BSButton color="secondary"
               style={{width: '50%'}}
-              type='button'
               href='/expenses_report'
               > Fill in your Expenses
-            </Button> :null}
+            </BSButton> :null}
             </Grid.Column> 
 
             {/* <Grid.Column textAlign='left' width={16}>
