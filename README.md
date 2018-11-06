@@ -14,3 +14,9 @@
 <p>Create account page: http://localhost:3000/create_acount</p>
 <p>Chart page: http://localhost:3000/formula</p>
 <p>Plaid API page: http://localhost:3000/bank_data</p>
+
+Colors used:
+Logo: #222
+quotes: #90f73b
+author:  rgb(23, 148, 133)
+button:hover: #eef73b

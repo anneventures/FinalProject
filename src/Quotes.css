@@ -12,14 +12,12 @@
 .homeApp h1{
     font-family: 'Paytone One', sans-serif;
     font-weight: 900;
-    color: #eef73b;
+    /*color: #eef73b;*/
+    color:#222;
     font-size: 600%;
     text-shadow: 4px 4px rgb(0, 0, 0, 0.5);
     letter-spacing: 3px;
 }
-
-
-
 
 .quoteBox {
     background-color: rgba(0, 0, 0, 0.5);  
@@ -33,7 +31,7 @@
     display: -ms-flex; 
     -ms-flex-direction: column; 
     -ms-align-items: center; 
-    box-shadow: 0 5px 5px 5px #eef73b;
+    box-shadow: 0 5px 5px 5px #20D1BD;
     /* border-top: 1px solid #fff; */
 }
 
@@ -88,19 +86,10 @@ button:hover{
 }
 #btnQuote{
     color: #20D1BD;
-    background-color:
 }
 .btnBox{
     margin-bottom:20px;
 }
-/* .App-bg{
-background: rgb(255, 196, 243);
-background: url('./finance.png')  repeat center center fixed;
-height: 70%;
-position: static; 
-width: 100%;
-} */
-
 
 .Quotes{
     list-style-type: none;
