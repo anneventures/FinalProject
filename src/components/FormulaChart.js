@@ -35,14 +35,10 @@ export default class FormulaChart extends React.Component{
   render() {
     return (
       <div>
-        <strong>Recommended Spending</strong>
-        <div className = 'doughnut'>
-        <Doughnut data={data} 
-        style={{width:'300%'}} />
-
-        </div>
-        
+      <strong>Recommended Spending</strong>
+        <Doughnut data={data}/>
       </div>
+   
     );
   }
 }

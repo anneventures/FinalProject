@@ -1,7 +1,7 @@
 import formula from './formula';
 import React from 'react';
 import {Doughnut} from 'react-chartjs-2';
-
+import'../../Dashboard.css'
 export default class FormulaChart extends React.Component{
 
   render() {
@@ -30,8 +30,9 @@ export default class FormulaChart extends React.Component{
     };
 console.log(formulaData)
     return (
-      <div>
+      <div className='doughnut'>
         <h2>Recommended Spending</h2>
+        <hr/>
         <Doughnut data={data} />
       </div>
     );
