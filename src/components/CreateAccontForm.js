@@ -69,6 +69,7 @@ class CreateAccontForm extends Component {
     const { email, password } = this.state
 
     return(
+    <div className="wp">  
       <Container text className='create_acount_form' style={{marginTop:40}}> 
         <h2>Create an account</h2>
 
@@ -112,6 +113,7 @@ class CreateAccontForm extends Component {
 
         </Form>
       </Container>
+      </div>
 
     )
   }
