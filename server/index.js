@@ -56,6 +56,7 @@ app.use(function (req, res, next) {
 
 // get for test
 app.get('/', api.echo);
+app.get('/get_income', api.get_income);
 
 app.post('/', api.echo);
 app.post('/create_user', api.create_user);

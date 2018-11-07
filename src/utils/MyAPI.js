@@ -82,6 +82,18 @@ export const expenses = (params) =>
     body: JSON.stringify( params )
   }).then(res => res.json())
 
+<<<<<<< HEAD
+export const getIncome = () =>
+  fetch(`${api}/get_income`, {
+    method: 'GET' ,
+    headers: {
+      ...headers,
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify()
+  }).then(res => res.json())
+    .catch(error => console.error(error))
+=======
   export const get_access_token = function(url = ``, data = {}) {
 
     return fetch(url, {
@@ -94,3 +106,4 @@ export const expenses = (params) =>
       body: JSON.stringify(data)
     }).then(response => response.json());
 }
+>>>>>>> f758672af248c2d68eb2f2ca4c2ace936e219c4f

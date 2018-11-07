@@ -10,6 +10,7 @@ import ExpensesForm from './ExpensesForm';
 import FormulaChart from './Formula/index';
 import BankData from './BankData';
 import QuoteApp from './QuoteApp';
+import Comparison from './Comparison'
 
 
 // alert
@@ -114,6 +115,10 @@ class App extends Component {
             
           <Route exact path='/formula' render={() => (
             <FormulaChart />
+          )} />
+
+          <Route exact path='/comparison' render={() => (
+            <Comparison />
           )} />
 
           <Route component={NoMatch} />
