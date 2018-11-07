@@ -109,7 +109,7 @@ class Dashboard extends Component {
             <Grid>
             <Grid.Column  width={16}>              
               <Header as='h2' className="header">What is your annual income?</Header>
-              <p>Please enter you annual income below then click the <em>Calculate</em> button to see how much of your income you should save towards your goal(s).</p>
+              <p className='paragraph'>Please enter you annual income below then click the <em>Calculate</em> button to see how much of your income you should save towards your goal(s).</p>
               <Input
                 style={{width: '100%'}}
                 icon='dollar sign'
@@ -121,7 +121,7 @@ class Dashboard extends Component {
             </Grid.Column>
                 
             <Grid.Column width={16}>
-              <BSButton color="info"
+              <BSButton color="secondary"
                 style={{width: '25%'}}
                 loading={this.state.loading}
                 disabled={this.state.loading}
@@ -144,7 +144,7 @@ class Dashboard extends Component {
             </Grid.Column>
             <Grid.Column width={8}>
             {this.state.showGraph ? 
-            <BSButton color="secondary"
+            <BSButton color="primary"
               style={{width: '50%'}}
               href='/expenses_report'
               > Fill in your Expenses
