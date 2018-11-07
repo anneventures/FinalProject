@@ -45,17 +45,6 @@ exports.echo = (req, res) => {
   });
 }
 
-exports.get_income = (req, res) => {
-  let find_param = loggedInID
-  mongoDbHelper.collection("users").findOne({'_id':find_param})
-  .then((results) =>{
-    res.json(results)
-  })
-  .catch((err) => {
-    res.json({status: 'error', detail: err})
-  })
-}
-
 // create user
 exports.create_user = (req, res) => {
 
@@ -379,16 +368,8 @@ exports.set_income = (req, res) => {
       'income': income
     }
   }
-
-  let user_income = {upd_param}
-
   // update
   mongoDbHelper.collection("users").update(find_param, upd_param)
-    .then(() => {
-      res.json({
-        income : user_income
-      })
-    })
 
     .catch((err) => {
       res.json({status: 'error', detail: err})
