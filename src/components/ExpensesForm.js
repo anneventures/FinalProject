@@ -3,6 +3,7 @@ import { withRouter } from 'react-router'
 import { connect } from 'react-redux'
 
 import * as MyAPI from '../utils/MyAPI'
+import '../components/ExpenseForm.css'
 
 // semantic-ui
 import { Container, Form, Input, Button, Grid } from 'semantic-ui-react'
@@ -54,8 +55,13 @@ class ExpensesForm extends Component {
     }
       render() {
 
-        return(          
-          <Container text className='create_acount_form'>
+        return(
+          <div className="wallpaper">          
+          <Container text className='create_acount_form'>  
+         <div className="box3">
+          <h3>Customize your budget plan</h3>
+          <p><b>Fill in the below information and submit!</b></p>
+         </div>
           
             <Form onSubmit={this.onSubmit} style={{marginTop:60}}>
               <Grid>
@@ -141,8 +147,9 @@ class ExpensesForm extends Component {
               </Grid>
                  
             </Form>
-    
+           
           </Container>
+          </div>
         )
     }
 }
