@@ -4,7 +4,7 @@ import { connect } from 'react-redux'
 
 import * as MyAPI from '../utils/MyAPI'
 import Comparison from './Comparison'
-
+import './ExpenseForm.css'
 
 // semantic-ui
 import { Container, Form, Input, Button, Grid } from 'semantic-ui-react'
