@@ -1,34 +1,34 @@
+.App{
+    /* background-color: coral; */
+    background-image: url('/public/money_wallpaper.png')  repeat center center fixed;
+}
 
 .home h1{
-    font-family: 'Bevan', cursive;
-    color: black;
-    font-size: 500%;
-    text-shadow: 3px 3px rgb(0, 0, 0, 0.5);
-    letter-spacing: 3px;;
-    padding-top: 13%;
+    font-family: 'Paytone One', sans-serif;
+    font-weight: 900;
+    color:#222;
+    font-size: 600%;
+    text-shadow: 4px 4px rgb(0, 0, 0, 0.5);
+    letter-spacing: 3px;
+    margin-left: 6%;
+    padding-top: 10%;
 }
 
 .box1{
-    width: 60%;
-    height: 100%;
-    /* background-color: rgba(30, 182, 80, 0.97); */
-    margin-left: 20%;
-    border: 1px solid black;
-    box-shadow: 0 15px 20px 5px rgba(0, 0, 0, 0.5);
-    background: linear-gradient(to top right, #0d7544 0%, #c7f8c0 100%);
+width: 65%;
+height: 100%;
+background: linear-gradient(to bottom, #20D1BD 10%, #ff99cc 110%);
+box-shadow: 0 3px 3px 3px rgba(0, 0, 0, 0.25);
+border: 2px solid black;
+margin-left: 15%;
+margin-top: 2%;
+padding: 5%;
 }
+
 
 .button{
     background-color: white;
     border-radius: 5px;
 }
 
-/* 03-Nov
-h2 {
-    font-family: 'Bevan', cursive;
-    color: black;
-    font-size: 500%;
-    text-shadow: 5px 5px rgb(0, 0, 0, 0.5);
-    letter-spacing: 3px;;
-    padding-top: 13%;
-} */
+

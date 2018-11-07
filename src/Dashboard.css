@@ -1,0 +1,21 @@
+body{
+    background: #1d0163;
+}
+.header{
+    color: #cabae3;
+}
+.dashboard{
+    text-align:center
+}
+
+.logout{
+    float:right;
+    margin-right: 20px;
+}
+
+
+.doughnut{
+    width:100%;
+    height:100%;
+    background:#cabae3;
+}

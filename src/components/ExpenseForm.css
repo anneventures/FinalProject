@@ -1,6 +1,32 @@
-.App-bg{
-    background: url('./money_wallpaper.jpg')  no-repeat center center fixed; 
-    height: 70%;
-    position: absolute; 
-    width: 100%;
-    }
+/* .App-bg{
+background: url('../money_wallpaper.jpg')  no-repeat center center fixed; 
+height: 100%;
+position: absolute; 
+width: 100%;
+} */
+
+.box3 h3{
+padding-top: 30px;
+padding-bottom: 30px;
+font-family: 'Cabin', sans-serif;
+font-size: 60px;
+text-shadow: 3px 3px rgba(255, 255, 255, 0.5);
+border: solid 2px black;
+box-shadow: 0 3px 3px 3px rgba(0, 0, 0, 0.37);
+}
+
+.box3 p{
+font-size: 20px;
+margin-top: 60px;
+text-shadow: 1px 1px rgba(255, 255, 255, 0.5);
+}
+
+.wallpaper{
+width: 70%;
+height: 100%;
+background: linear-gradient(to bottom, #20D1BD 10%, #ff99cc 95%);
+margin: auto;
+border: solid 2px black;
+box-shadow: 0 3px 3px 3px rgba(0, 0, 0, 0.37);
+
+}

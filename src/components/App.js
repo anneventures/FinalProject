@@ -85,11 +85,11 @@ class App extends Component {
 
         <Switch>
 
-        <Route exact path = '/home' render ={()=>(
+        <Route exact path = '/' render ={()=>(
           <QuoteApp src = "https://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[posts_per_page]=1&callback="/>
     )} />
 
-          <Route exact path='/' render={() => (
+          <Route exact path='/login' render={() => (
             <Home />
           )} />
 

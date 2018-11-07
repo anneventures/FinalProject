@@ -2,6 +2,9 @@ import React, { Component } from 'react'
 import { withRouter } from 'react-router-dom'
 import { connect } from 'react-redux'
 import PlaidLink from 'react-plaid-link'
+import * as MyAPI from '../utils/MyAPI'
+
+const api = "http://localhost:4002"
 
 
 const PLAID_CLIENT_ID= '5bccf13344fc260011e054b9'
@@ -11,9 +14,20 @@ const PLAID_ENV= 'sandbox'
 
 
 class BankData extends Component {
+
+  
+
   handleOnSuccess(token, metadata) {
     console.log(token);
     console.log(metadata);
+    
+
+    
+
+    MyAPI.get_access_token(`${api}/get_access_token`, {public_token: token})
+    .then(data => console.log(JSON.stringify(data)))
+    .catch(err => console.error(err));
+    
    
   }
   handleOnExit() {
@@ -27,7 +41,7 @@ class BankData extends Component {
         product={["auth", "transactions"]}
         publicKey = {PLAID_PUBLIC_KEY}
         onExit={this.handleOnExit}
-        onSuccess={this.handleOnSuccess}>
+        onSuccess={this.handleOnSuccess.bind(this)}>
         Open Link and connect your bank!
       </PlaidLink>
     )

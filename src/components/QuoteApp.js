@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import '../Quotes.css'
-
 import '../App.css'
 
 import QuoteBox from './QuoteBox';
@@ -68,10 +67,10 @@ display(){
           <QuoteBox />
           <Buttons onClick = {this.onClick}
           />
-          <RenderLogin/> 
+          
        </div>
 
-       {/* <RenderLogin/>  */}
+       <RenderLogin/> 
     </div>  
 </div>
       

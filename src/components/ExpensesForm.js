@@ -3,8 +3,12 @@ import { withRouter } from 'react-router'
 import { connect } from 'react-redux'
 
 import * as MyAPI from '../utils/MyAPI'
+<<<<<<< HEAD
 import Comparison from './Comparison'
 
+=======
+import '../components/ExpenseForm.css'
+>>>>>>> f758672af248c2d68eb2f2ca4c2ace936e219c4f
 
 // semantic-ui
 import { Container, Form, Input, Button, Grid } from 'semantic-ui-react'
@@ -58,8 +62,13 @@ class ExpensesForm extends Component {
     }
       render() {
 
-        return(          
-          <Container text className='create_acount_form'>
+        return(
+          <div className="wallpaper">          
+          <Container text className='create_acount_form'>  
+         <div className="box3">
+          <h3>Customize your budget plan</h3>
+          <p><b>Fill in the below information and submit!</b></p>
+         </div>
           
             <Form onSubmit={this.onSubmit} style={{marginTop:60}}>
               <Grid>
@@ -154,6 +163,7 @@ class ExpensesForm extends Component {
               </Grid>
                  
             </Form>
+<<<<<<< HEAD
 
             {this.state.showgraph ?            
             <Comparison 
@@ -167,7 +177,11 @@ class ExpensesForm extends Component {
             personal= {this.state.personal}
             savings = {this.state.savings}
             /> : null}
+=======
+           
+>>>>>>> f758672af248c2d68eb2f2ca4c2ace936e219c4f
           </Container>
+          </div>
         )
     }
 }

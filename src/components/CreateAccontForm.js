@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { withRouter } from 'react-router'
 import { connect } from 'react-redux'
+import '../Quotes.css'
 
 // semantic-ui
 import { Container, Form, Input, Button, Grid } from 'semantic-ui-react'
@@ -68,14 +69,15 @@ class CreateAccontForm extends Component {
     const { email, password } = this.state
 
     return(
-      <Container text className='create_acount_form' style={{marginTop:40}}>
+    <div className="wp">  
+      <Container text className='create_acount_form' style={{marginTop:40}}> 
         <h2>Create an account</h2>
 
 
         <Form onSubmit={this.onSubmit} style={{marginTop:60}}>
           <Grid>
 
-            <Grid.Column textAlign='left' width={16}>
+            <Grid.Column textAlign='left' width={14}>
               <label>Email</label>
               <Input
                 style={{width: '100%'}}
@@ -87,7 +89,7 @@ class CreateAccontForm extends Component {
                 placeholder='yourname@example.com' />
             </Grid.Column>
 
-            <Grid.Column textAlign='left' width={16}>
+            <Grid.Column textAlign='left' width={14}>
               <label>Password</label>
               <Input
                 style={{width: '100%'}}
@@ -99,7 +101,7 @@ class CreateAccontForm extends Component {
                 placeholder='********' />
             </Grid.Column>
 
-            <Grid.Column width={16}>
+            <Grid.Column width={14}>
               <Button
                 style={{width: '100%'}}
                 loading={this.state.loading}
@@ -110,8 +112,9 @@ class CreateAccontForm extends Component {
           </Grid>
 
         </Form>
-
       </Container>
+      </div>
+
     )
   }
 }

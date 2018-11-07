@@ -431,3 +431,51 @@ exports.set_expenses = (req, res) => {
       res.json({status: 'error', detail: err})
   })
 }
+
+//START PLAID API
+import plaid from 'plaid'
+import util from 'util'
+import moment from 'moment'
+
+var PLAID_CLIENT_ID = '5bccf13344fc260011e054b9';
+var PLAID_SECRET = '1ed5257d83985b9fa3b21a8456745f';
+var PLAID_PUBLIC_KEY = '0041305fbda5475f0b057587d99cff';
+var PLAID_ENV = 'sandbox';
+
+var ACCESS_TOKEN = null;
+var PUBLIC_TOKEN = null;
+var ITEM_ID = null;
+
+var client = new plaid.Client(
+  PLAID_CLIENT_ID,
+  PLAID_SECRET,
+  PLAID_PUBLIC_KEY,
+  plaid.environments[PLAID_ENV],
+  {version: '2018-05-22'}
+
+  
+);
+
+
+exports.get_access_token = (req, res) => {
+  PUBLIC_TOKEN = req.body.public_token;
+  client.exchangePublicToken(PUBLIC_TOKEN, function(error, tokenResponse) {
+    if(error != null) {
+      console.log(error);
+      return res.json({
+        error: error,
+        message: "here"
+      });
+    }
+    ACCESS_TOKEN = tokenResponse.access_token;
+    ITEM_ID = tokenResponse.item_id;
+    console.log(tokenResponse);
+    res.json({
+      access_token: ACCESS_TOKEN,
+      item_id: ITEM_ID,
+      error: null
+    });
+  });
+}
+
+

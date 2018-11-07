@@ -1,9 +1,22 @@
-const port = 4002
+// Set mongoose to leverage built in JavaScript ES6 Promises
+
+
+// const port = 4002
+
+var port = process.env.PORT || 4002
+
+
+var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/budget_db";
+
+mongoose.Promise = Promise;
+
+mongoose.connect(MONGODB_URI);
+
 
 import express from 'express'
 
 import session from 'express-session'
-
+import mongoose from 'mongodb'
 
 
 
@@ -52,13 +65,13 @@ app.post('/login_with_token', api.login_with_token);
 app.post('/logout', api.logout);
 app.post('/set_expenses', api.set_expenses);
 app.post('/set_income', api.set_income);
+app.post('/get_access_token', api.get_access_token);
 
 
 
 
-
-
-app.listen(port);
-console.log('Listening on port '+port+'...');
+app.listen(port, function() {
+  console.log("App running on port " + port);
+});
 
 
