@@ -81,3 +81,14 @@ export const expenses = (params) =>
     },
     body: JSON.stringify( params )
   }).then(res => res.json())
+
+export const getIncome = () =>
+  fetch(`${api}/get_income`, {
+    method: 'GET' ,
+    headers: {
+      ...headers,
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify()
+  }).then(res => res.json())
+    .catch(error => console.error(error))
