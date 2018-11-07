@@ -20,7 +20,8 @@ class ExpensesForm extends Component {
         entertainment: null,
         debt: null,
         personal: null,
-        savings: null
+        savings: null,
+        showgraph: false
     }
 
     handleChange = (e, { name, value }) => {
@@ -53,7 +54,7 @@ class ExpensesForm extends Component {
         console.log("err:", err)
 
       })
-      
+      this.setState ({showgraph: true});
     }
       render() {
 
@@ -62,7 +63,16 @@ class ExpensesForm extends Component {
           
             <Form onSubmit={this.onSubmit} style={{marginTop:60}}>
               <Grid>
-        
+
+              <Grid.Column textAlign='left' width={16}>
+                  <label>Income</label>
+                  <Input
+                    style={{width: '100%'}}
+                    name='income'
+                    onChange={this.handleChange}
+                    placeholder='yearly income' />
+                </Grid.Column>
+
                 <Grid.Column textAlign='left' width={16}>
                   <label>Housing</label>
                   <Input
@@ -144,7 +154,10 @@ class ExpensesForm extends Component {
               </Grid>
                  
             </Form>
+
+            {this.state.showgraph ?            
             <Comparison 
+            income = {this.state.income}
             housing = {this.state.housing}
             utilities = {this.state.utilities}
             transportation = {this.state.transportation}
@@ -153,7 +166,7 @@ class ExpensesForm extends Component {
             debt = {this.state.debt}
             personal= {this.state.personal}
             savings = {this.state.savings}
-            />
+            /> : null}
           </Container>
         )
     }
