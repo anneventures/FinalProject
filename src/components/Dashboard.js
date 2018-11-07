@@ -7,7 +7,7 @@ import { LOCAL_STRAGE_KEY } from '../utils/Settings'
 //semantic-ui
 import { Container, Form, Input, Button, Grid, Header } from 'semantic-ui-react'
 
-import '../Dashboard.css'
+import './Dashboard.css'
 import { Button as BSButton } from 'reactstrap';
 
 // API

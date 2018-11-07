@@ -3,9 +3,7 @@
     padding-top: 10%;
     padding-bottom: 10%;
 }    
-.App{
-    background-color: coral;
-}
+
 
 .createApp{ 
     background: linear-gradient(to bottom, #20D1BD 10%, #ff99cc 110%);

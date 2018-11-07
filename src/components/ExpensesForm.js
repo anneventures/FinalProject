@@ -3,12 +3,7 @@ import { withRouter } from 'react-router'
 import { connect } from 'react-redux'
 
 import * as MyAPI from '../utils/MyAPI'
-<<<<<<< HEAD
-import Comparison from './Comparison'
-
-=======
 import '../components/ExpenseForm.css'
->>>>>>> f758672af248c2d68eb2f2ca4c2ace936e219c4f
 
 // semantic-ui
 import { Container, Form, Input, Button, Grid } from 'semantic-ui-react'
@@ -163,23 +158,7 @@ class ExpensesForm extends Component {
               </Grid>
                  
             </Form>
-<<<<<<< HEAD
-
-            {this.state.showgraph ?            
-            <Comparison 
-            income = {this.state.income}
-            housing = {this.state.housing}
-            utilities = {this.state.utilities}
-            transportation = {this.state.transportation}
-            food = {this.state.food}
-            entertainment = {this.state.entertainment}
-            debt = {this.state.debt}
-            personal= {this.state.personal}
-            savings = {this.state.savings}
-            /> : null}
-=======
            
->>>>>>> f758672af248c2d68eb2f2ca4c2ace936e219c4f
           </Container>
           </div>
         )
