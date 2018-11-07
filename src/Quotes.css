@@ -3,6 +3,9 @@
     padding-top: 10%;
     padding-bottom: 10%;
 }    
+.App{
+    background-color: coral;
+}
 
 .createApp{ 
     background: linear-gradient(to bottom, #20D1BD 10%, #ff99cc 110%);
@@ -131,9 +134,29 @@ button:hover{
   
 }
 
+.form .grid .button{
+    border: none;	  
+    color: #fff;	  
+    background: #20D1BD;
+    padding: 10px;	  
+    border-radius: 25px;	  
+    outline: none;
+    box-shadow: 0 3px 3px 3px rgba(255, 255, 255, 0.37);
+}
+
 .form .grid .button:hover  {
     color: black;
     background:  #eef73b;
-    font-size:1.25em; 
+    font-size:1.25em;
+    box-shadow: 0 3px 3px 3px rgba(255, 255, 255, 0.37);
 
+}
+
+.grid a{
+    color: black;
+    font-size: 15px;
+    padding: 5px;
+    background-color: #20D1BD;
+    border-radius: 25px;
+    box-shadow: 0 3px 3px 3px rgba(255, 255, 255, 0.37);
 }
