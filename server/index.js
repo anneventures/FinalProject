@@ -57,6 +57,7 @@ app.use(function (req, res, next) {
 // get for test
 app.get('/', api.echo);
 app.get('/get_income', api.get_income);
+app.get('/get_balance', api.get_balance);
 
 app.post('/', api.echo);
 app.post('/create_user', api.create_user);
@@ -66,6 +67,7 @@ app.post('/logout', api.logout);
 app.post('/set_expenses', api.set_expenses);
 app.post('/set_income', api.set_income);
 app.post('/get_access_token', api.get_access_token);
+
 
 
 

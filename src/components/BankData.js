@@ -15,6 +15,16 @@ const PLAID_ENV= 'sandbox'
 
 class BankData extends Component {
 
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      balance: 0,
+      loading: false,
+      error: null,
+    };
+  }
+
   
 
   handleOnSuccess(token, metadata) {
@@ -23,10 +33,22 @@ class BankData extends Component {
     
 
     
+    let someFn = (data) => {
+      console.log(JSON.stringify(data));
+      localStorage.setItem('access_token', data.access_token);
+    } 
+
+    let anotherFn = (data) => {
+      console.log(JSON.stringify(data));
+    }
 
     MyAPI.get_access_token(`${api}/get_access_token`, {public_token: token})
-    .then(data => console.log(JSON.stringify(data)))
-    .catch(err => console.error(err));
+    .then(someFn).catch(err => console.error(err));
+
+    MyAPI.get_balance(`${api}/get_balance`)
+    .then(anotherFn).catch(err => console.log(err));
+    
+    
     
    
   }
