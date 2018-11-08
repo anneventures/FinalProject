@@ -478,4 +478,17 @@ exports.get_access_token = (req, res) => {
   });
 }
 
+exports.get_balance = (req, res) => {
+  client.getBalance(ACCESS_TOKEN, function(error, res) {
+    if(error != null) {
+      console.log(error);
+      return res.json({
+        error: error
+      });
+    }
+    console.log(res);
+    res.json({error: null, accounts: res});
+  });
+};
+
 

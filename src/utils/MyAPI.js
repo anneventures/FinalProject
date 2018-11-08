@@ -105,3 +105,14 @@ export const getIncome = () =>
     body: JSON.stringify()
   }).then(res => res.json())
     .catch(error => console.error(error))
+
+export const get_balance = function(url = ``, data = {}) {
+
+  return fetch(url, {
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json; charset=utf-8',
+    },
+    body: JSON.stringify()
+  }).then(response => response.json());
+}
